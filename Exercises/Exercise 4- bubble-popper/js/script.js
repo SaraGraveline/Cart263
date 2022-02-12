@@ -122,10 +122,10 @@ function draw() {
     }
 
     //sees if the tip touches the redbubble or not
-    let d = dist(tipX, tipY, blueBubble.x, blueBubble.y);
-    if (d < blueBubble.size/2) {
-      blueBubble.x = random(width);
-      blueBubble.y = random(height);
+    let x = dist(tipX, tipY, redBubble.x, redBubble.y);
+    if (x < redBubble.size/2) {
+      redBubble.x = random(width);
+      redBubble.y = random(height);
     }
   };
 };
