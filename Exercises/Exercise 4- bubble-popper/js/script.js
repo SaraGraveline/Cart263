@@ -1,15 +1,15 @@
 /**
-Activity 5: Bubble Popper
+Activity 5: blueBubble  Popper
 Sara Graveline
 
 This activity is about playing around with ml5 and the feature of handpose. And also too get confortable with it.
 To do list:
-  - Get handpose working - Bubble Popper - Drawing a pin - Movement of Bubble
-  1) Add sound to when the bubble is popping
+  - Get handpose working - blueBubble  Popper - Drawing a pin - Movement of Bubble
+  1) Add sound to when the blueBubble  is popping
   2) put how many of the bubbles were poped
-  3) and other bubble if they are poped then the game ends.
+  3) and other blueBubble  if they are poped then the game ends.
   4) put the wording on the blue bubble: homework
-  5) and the wording on new bubble: break 
+  5) and the wording on new bubble: break
 */
 
 "use strict";
@@ -24,14 +24,18 @@ let handpose = undefined;
 let prediction = [];
 
 // the undefined bubble
-let bubble = undefined;
+let blueBubble = undefined;
+
+let redBubble = undefined;
+
+let state =`title`;
 
 function preload() {
 
 }
 
 function setup() {
-  createCanvas(640, 480);
+  createCanvas(500, 700);
 
   //This access the user's webcam
   video = createCapture(VIDEO);
@@ -50,8 +54,17 @@ function setup() {
     prediction = results;
   });
 
-  //Proporties of the bubble
-  bubble = {
+  //Proporties of the bluebubble
+  blueBubble = {
+    x: random(width),
+    y: height,
+    size: 100,
+    vx: 0,
+    vy: -2
+  };
+
+  //Proporties of the redbubble
+  redBubble = {
     x: random(width),
     y: height,
     size: 100,
@@ -62,7 +75,18 @@ function setup() {
 
 
 function draw() {
-  background(0);
+  background(220,245,255);
+
+  //if statement for the title, simulation and failed.
+  if (state === `title`) {
+    title();
+  }
+  else if (state === `simulation`) {
+    simulation();
+  }
+  else if (state === `failed`) {
+    failed();
+  };
 
   //all the prediction and different numbers for tip, basae and index.
   if (prediction.length > 0) {
@@ -78,7 +102,7 @@ function draw() {
     //draws the line
     push();
     noFill();
-    stroke(255, 255, 255);
+    stroke(120, 150, 210);
     strokeWeight(2);
     line(baseX, baseY, tipX, tipY);
     pop();
@@ -90,32 +114,81 @@ function draw() {
     ellipse(baseX, baseY, 20);
     pop();
 
-    //sees if the bubble pops or not
-    let d = dist(tipX, tipY, bubble.x, bubble.y);
-    if (d < bubble.size/2) {
-      bubble.x = random(width);
-      bubble.y = random(height);
+    //sees if the blueBubble  pops or not
+    let d = dist(tipX, tipY, blueBubble.x, blueBubble.y);
+    if (d < blueBubble.size/2) {
+      blueBubble.x = random(width);
+      blueBubble.y = random(height);
+    }
+
+    //sees if the tip touches the redbubble or not
+    let d = dist(tipX, tipY, blueBubble.x, blueBubble.y);
+    if (d < blueBubble.size/2) {
+      blueBubble.x = random(width);
+      blueBubble.y = random(height);
     }
   };
+};
 
-  //makes the main bubble move
-  bubble.x += bubble.vx;
-  bubble.y += bubble.vy;
+function title() {
+  push();
+  textSize(40);
+  fill(150, 150, 255);
+  textAlign(CENTER, CENTER);
+  text(`  Destroy Covid
+    so human being's can
+    return to their normal life.`, width/2, height/2);
+  pop();
+};
 
-  //makes the bubble appear randomly on the width.
-  if (bubble.y < 0) {
-    bubble.x = random(width);
-    bubble.y = height;
+function simulation() {
+  //makes the main blueBubble move
+  blueBubble.x += blueBubble.vx;
+  blueBubble.y += blueBubble.vy;
+
+  //makes the main redBubble move
+  redBubble.x += redBubble.vx;
+  redBubble.y += redBubble.vy;
+
+  //makes the blueBubble appear randomly on the width.
+  if (blueBubble.y < 0) {
+    blueBubble.x = random(width);
+    blueBubble.y = height;
   };
-  if (bubble.x < 0) {
-    bubble.x = width;
-    bubble.y = random(height);
+  if (blueBubble.x < 0) {
+    blueBubble.x = width;
+    blueBubble.y = random(height);
   };
 
-//draws the main bubble that needs to be poped.
+  //makes the redBubble appear randomly on the width.
+  if (redBubble.y < 0) {
+    redBubble.x = random(width);
+    redBubble.y = height;
+  };
+  if (redBubble.x < 0) {
+    redBubble.x = width;
+    redBubble.y = random(height);
+  };
+
+
+//draws the main blueBubble that needs to be poped.
   push();
   fill(0, 100, 200);
   noStroke();
-  ellipse(bubble.x, bubble.y, bubble.size);
+  ellipse(blueBubble.x, blueBubble.y, blueBubble.size);
   pop();
+
+//draws the main redBubble that should not be poped.
+  push();
+  fill(255, 99, 71);
+  noStroke();
+  ellipse(redBubble.x, redBubble.y, redBubble.size);
+  pop();
+};
+
+//Starts the game. This leads to the simulation when you press the mouse.
+function mousePressed() {
+  if (state === `title`) {
+    state = `simulation`;
+  }
 };
