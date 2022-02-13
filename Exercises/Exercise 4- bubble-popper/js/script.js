@@ -35,7 +35,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(500, 700);
+  createCanvas(600, 800);
 
   //This access the user's webcam
   video = createCapture(VIDEO);
@@ -72,7 +72,6 @@ function setup() {
     vy: -2
   };
 };
-
 
 function draw() {
   background(220,245,255);
@@ -124,15 +123,14 @@ function draw() {
     //sees if the tip touches the redbubble or not
     let x = dist(tipX, tipY, redBubble.x, redBubble.y);
     if (x < redBubble.size/2) {
-      redBubble.x = random(width);
-      redBubble.y = random(height);
+      state = `failed`;
     }
   };
 };
 
 function title() {
   push();
-  textSize(40);
+  textSize(30);
   fill(150, 150, 255);
   textAlign(CENTER, CENTER);
   text(`  Destroy Covid
@@ -170,7 +168,6 @@ function simulation() {
     redBubble.y = random(height);
   };
 
-
 //draws the main blueBubble that needs to be poped.
   push();
   fill(0, 100, 200);
@@ -183,6 +180,16 @@ function simulation() {
   fill(255, 99, 71);
   noStroke();
   ellipse(redBubble.x, redBubble.y, redBubble.size);
+  pop();
+};
+
+function failed(){
+  push();
+  textSize(30);
+  fill(150, 150, 255);
+  textAlign(CENTER, CENTER);
+  text(`   Oops,
+     you just killed someone :(`, width/2, height/2);
   pop();
 };
 
