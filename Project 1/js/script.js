@@ -1,14 +1,15 @@
 /**
-In Class 5
+Project 1 - A Night at the Movies
 Sara Graveline
 
-Everything we did in the class 5 - Lecture.
-Table of content:
-  - Hand Gestures? What Can I detect?
-  - ObjectDetector
-    - Working with confidence
-  - Blinking
-  - Machince withing stuff outside webcam?
+Some ideas:
+- minions movie
+  -
+- One eposide of run BTS
+- game of throne where the user will have to climb the wall
+- up movie where the user has to add and pop some ballons to go up and down
+- Despicale me where the guy is trying to enter into the villan's house so the idea is to not let that happen.
+- texting game where you get to try to stop the
 **/
 
 "use strict";
