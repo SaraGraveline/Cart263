@@ -4,12 +4,18 @@ Sara Graveline
 
 Some ideas:
 - minions movie
-  -
+  - minions trying to find other villains to connent with
+  - like moving from one side of the screen sqaure, it starts a small game which ends in bad and then the minions comes back to the main page and they die again.
 - One eposide of run BTS
 - game of throne where the user will have to climb the wall
 - up movie where the user has to add and pop some ballons to go up and down
 - Despicale me where the guy is trying to enter into the villan's house so the idea is to not let that happen.
-- texting game where you get to try to stop the
+- emotion game where you need to find good emotions to change the negative emotions
+- tron game where you grab the disk and bring it to the other side and make a goal however there will be some obstacles.
+- Nerve movies - based on texting - someone asks a question and you reply and  it tells you next steps.
+  - and depending on the dares you get to do some those things. Like different games:
+    - 1) like if the dare is to say something bad you did that you never told anyone and the player has to turn on their microphone to say it out loud
+    - so on
 **/
 
 "use strict";
