@@ -5,13 +5,31 @@ By default that's nothing.
 
 **********************************************/
 body {
-  background-color: #abcdab
+  margin: 0;
+  background: url(2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+
 }
 
 #haiku {
   font-family: fantasy;
   font-size: 3rem;
-  font-weight; bold;
+  text-align: center;
+  line-height: 7rem;
+  margin-top: 12rem;
+}
+
+#line-1 {
+  color: blue;
+}
+
+#line-2 {
+  color: red;
+}
+
+#line-3 {
+  color: green;
 }
 
 header {
@@ -22,5 +40,6 @@ header {
   color: white;
   font-family: fantasy;
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.5rem;
+  opacity: 0.95;
 };
