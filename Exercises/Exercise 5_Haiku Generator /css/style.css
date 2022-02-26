@@ -5,11 +5,22 @@ By default that's nothing.
 
 **********************************************/
 body {
-  background-color: #
+  background-color: #abcdab
 }
 
 #haiku {
   font-family: fantasy;
-  font-size 3rem;
+  font-size: 3rem;
   font-weight; bold;
 }
+
+header {
+  text-align: center;
+  background-image: linear-gradient(to right, blue , yellow);
+  padding: 1%;
+  padding-bottom: .3%;
+  color: white;
+  font-family: fantasy;
+  font-size: 1.5rem;
+  line-height: 2rem;
+};
