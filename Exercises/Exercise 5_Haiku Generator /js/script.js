@@ -14,7 +14,7 @@ Plan:
 
 // this is the data where the haiku lines are made from
 let fiveSyllables = [
-    `O, to be a tree`,
+    `O, be a tree`,
     `The cat does not know`,
     `We are all forests`,
     `You have done your best`,
@@ -40,6 +40,47 @@ let line3P = document.getElementById('line-3');
 line1P.innerText = line1;
 line2P.innerText = line2;
 line3P.innerText = line3;
+
+function setNewLine(element) {
+  if (element === line1P || element === line3P) {
+    element.innerText = random(fiveSyllables);
+  }
+  else if (element === line2P) {
+    element.innerText = random(sevenSyllables);
+  }
+};
+
+line1P.addEventListener(`click`, lineClicked);
+line2P.addEventListener(`click`, lineClicked);
+line3P.addEventListener(`click`, lineClicked);
+
+function lineClicked(event) {
+  fadeOut(event.target, 1);
+};
+
+function fadeOut(element, opacity) {
+  opacity -= 0.01;
+  element.style[`opacity`] = opacity;
+  if (opacity > 0) {
+    requestAnimationFrame(function() {
+        fadeOut(element, opacity);
+    });
+  }
+  else {
+    setNewLine(element);
+    fadeIn(element, 0);
+  }
+};
+
+function fadeIn(element, opacity) {
+  opacity += 0.01;
+  element.style[`opacity`] = opacity;
+  if (opacity < 1 ) {
+    requestAnimationFrame(function() {
+      fadeIn(element, opacity);
+    })
+  }
+};
 
 
 function random(array) {
