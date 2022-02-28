@@ -12,7 +12,7 @@ Plan:
 
 "use strict";
 
-// this is the data where the haiku lines are made from
+// this is the data where the five syllables haiku lines are made from
 let fiveSyllables = [
     `O, be a tree`,
     `The cat does not know`,
@@ -21,6 +21,7 @@ let fiveSyllables = [
     `They are all gone now`
 ];
 
+// this is the data where the seven syllables haiku lines are made from
 let sevenSyllables = [
     `Say the things left unsaid`,
     `Never believe the wind's lies`,
@@ -29,18 +30,17 @@ let sevenSyllables = [
     `They will not come back again`
 ];
 
-let line1 = random(fiveSyllables);
-let line2 = random(sevenSyllables);
-let line3 = random(fiveSyllables);
-
+// three elements from html containing random lines from the lines above
 let line1P = document.getElementById('line-1');
 let line2P = document.getElementById('line-2');
 let line3P = document.getElementById('line-3');
 
-line1P.innerText = line1;
-line2P.innerText = line2;
-line3P.innerText = line3;
+// apply which type of syllables belongs to which line/paragraph
+line1P.innerText = random(fiveSyllables);
+line2P.innerText = random(sevenSyllables);
+line3P.innerText = random(fiveSyllables);
 
+// appears the change of lines depending on the syllables
 function setNewLine(element) {
   if (element === line1P || element === line3P) {
     element.innerText = random(fiveSyllables);
@@ -50,14 +50,17 @@ function setNewLine(element) {
   }
 };
 
+// animation for the clicking on each lines
 line1P.addEventListener(`click`, lineClicked);
 line2P.addEventListener(`click`, lineClicked);
 line3P.addEventListener(`click`, lineClicked);
 
+// makes the line fadeout when clicked upon
 function lineClicked(event) {
   fadeOut(event.target, 1);
 };
 
+// function for fadeoout with opacity.
 function fadeOut(element, opacity) {
   opacity -= 0.01;
   element.style[`opacity`] = opacity;
@@ -67,11 +70,13 @@ function fadeOut(element, opacity) {
     });
   }
   else {
+    // if statement for the new line to fade in when the first line is faded-out
     setNewLine(element);
     fadeIn(element, 0);
   }
 };
 
+// function for fadeIn with opacity animation
 function fadeIn(element, opacity) {
   opacity += 0.01;
   element.style[`opacity`] = opacity;
@@ -82,7 +87,7 @@ function fadeIn(element, opacity) {
   }
 };
 
-
+// return array function for returning a random element.
 function random(array) {
   //gives us a random number
   let index = Math.floor(Math.random() * array.length);
