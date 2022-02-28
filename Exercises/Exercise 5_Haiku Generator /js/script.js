@@ -29,31 +29,42 @@ let sevenSyllables = [
     `Nothing can satisfy you`,
     `They will not come back again`
 ];
+// undefind lines from html
+let line1P = [];
+let line2P = [];
+let line3P = [];
+
+// getting the element by id from html and assigned it in js.
+id ();
+// function for apply random syllables to lines/paragraph
+innerText ();
+//animations the clicking on each lines
+addEventListener ();
+
+// getting the element by id from html and assigning random lines to them in js.
 
 // three elements from html containing random lines from the lines above
-let line1P = document.getElementById('line-1');
-let line2P = document.getElementById('line-2');
-let line3P = document.getElementById('line-3');
+function id() {
+  line1P = document.getElementById('line-1');
+  line2P = document.getElementById('line-2');
+  line3P = document.getElementById('line-3');
+}
 
 // apply which type of syllables belongs to which line/paragraph
-line1P.innerText = random(fiveSyllables);
-line2P.innerText = random(sevenSyllables);
-line3P.innerText = random(fiveSyllables);
+function innerText() {
+  line1P.innerText = random(fiveSyllables);
+  line2P.innerText = random(sevenSyllables);
+  line3P.innerText = random(fiveSyllables);
+}
 
-// appears the change of lines depending on the syllables
-function setNewLine(element) {
-  if (element === line1P || element === line3P) {
-    element.innerText = random(fiveSyllables);
-  }
-  else if (element === line2P) {
-    element.innerText = random(sevenSyllables);
-  }
-};
+// Animation of fade in and out for each lines with clicked upon //
 
 // animation for the clicking on each lines
-line1P.addEventListener(`click`, lineClicked);
-line2P.addEventListener(`click`, lineClicked);
-line3P.addEventListener(`click`, lineClicked);
+function addEventListener() {
+  line1P.addEventListener(`click`, lineClicked);
+  line2P.addEventListener(`click`, lineClicked);
+  line3P.addEventListener(`click`, lineClicked);
+}
 
 // makes the line fadeout when clicked upon
 function lineClicked(event) {
@@ -62,8 +73,10 @@ function lineClicked(event) {
 
 // function for fadeoout with opacity.
 function fadeOut(element, opacity) {
+  // decreases the opacity
   opacity -= 0.01;
   element.style[`opacity`] = opacity;
+  // opacity is less then 0 and if it reach 0, it stops
   if (opacity > 0) {
     requestAnimationFrame(function() {
         fadeOut(element, opacity);
@@ -78,12 +91,28 @@ function fadeOut(element, opacity) {
 
 // function for fadeIn with opacity animation
 function fadeIn(element, opacity) {
+  // increase in opacity
   opacity += 0.01;
   element.style[`opacity`] = opacity;
+  // less than 1 number of the opacity, if it reaches 1 then animation stops
   if (opacity < 1 ) {
     requestAnimationFrame(function() {
       fadeIn(element, opacity);
     })
+  }
+};
+
+// assigning the different syllables line to the 3 lines and return array function for returning a random element //
+
+// appears the change of lines depending on the syllables
+function setNewLine(element) {
+  // line 1 and 3 is five syllables
+  if (element === line1P || element === line3P) {
+    element.innerText = random(fiveSyllables);
+  }
+  else if (element === line2P) {
+    // middle line is seven syllables
+    element.innerText = random(sevenSyllables);
   }
 };
 
@@ -93,3 +122,5 @@ function random(array) {
   let index = Math.floor(Math.random() * array.length);
   return array[index];
 };
+
+// thank you 
