@@ -102,12 +102,14 @@ function fadeIn(element, opacity) {
   }
 };
 
+// function for when the mouse is over lines it will make them black
 function mouseOver() {
   document.getElementById("line-1").style.color = "black";
   document.getElementById("line-2").style.color = "black";
   document.getElementById("line-3").style.color = "black";
 }
 
+// function for when the mouse is not over the lines it will make them different colors.
 function mouseOut() {
   document.getElementById("line-1").style.color = "blue";
   document.getElementById("line-2").style.color = "red";
