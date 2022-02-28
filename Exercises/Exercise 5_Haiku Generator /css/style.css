@@ -1,9 +1,10 @@
 /*********************************************
 
-Here is a description of any special CSS used.
-By default that's nothing.
+This css uses linear-gradient, background image with some opacity
+and some typgraphy adjustments on the section and header.
 
 **********************************************/
+/* the whole body's image, its size and margin*/
 body {
   margin: 0;
   background: url(2.jpg);
@@ -11,6 +12,7 @@ body {
   background-repeat: no-repeat;
 }
 
+/* haiku section font, font size, aliging text to the center with 7 rem line height and 12 rem top margin. */
 #haiku {
   font-family: fantasy;
   font-size: 3rem;
@@ -19,18 +21,7 @@ body {
   margin-top: 12rem;
 }
 
-#line-1 {
-  color: blue;
-}
-
-#line-2 {
-  color: red;
-}
-
-#line-3 {
-  color: green;
-}
-
+/* header text with center fantasy white 1.5 rem text, gradient background, manuel padding with .95 opacity. */
 header {
   text-align: center;
   background-image: linear-gradient(to right, blue , yellow);
