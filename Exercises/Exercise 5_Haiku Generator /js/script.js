@@ -102,6 +102,17 @@ function fadeIn(element, opacity) {
   }
 };
 
+function mouseOver() {
+  document.getElementById("line-1").style.color = "black";
+  document.getElementById("line-2").style.color = "black";
+  document.getElementById("line-3").style.color = "black";
+}
+
+function mouseOut() {
+  document.getElementById("line-1").style.color = "blue";
+  document.getElementById("line-2").style.color = "red";
+  document.getElementById("line-3").style.color = "green";
+}
 // assigning the different syllables line to the 3 lines and return array function for returning a random element //
 
 // appears the change of lines depending on the syllables
@@ -123,4 +134,4 @@ function random(array) {
   return array[index];
 };
 
-// thank you 
+// thank you
