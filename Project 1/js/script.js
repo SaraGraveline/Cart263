@@ -9,14 +9,16 @@ Dare 1 is to drop a worse picture of oneself and dare 2 is to name the family me
 
 "use strict";
 
-let state = 0;
+let state = 0; // state for different pages of the game
 
-let vid, shot, eye, file, skull, fingerprint, timer, hacker, goodluck;
+let vid, shot, eye, file, skull, fingerprint, timer, hacker, goodluck; // variable for all the gif used on state 2 and on function preload.
 
-let mostHated = {
+let mostHated = { // variable for the dare 2 - to fill a family member name.
   name: `stranger`
 };
 
+//
+//This preloads all the gifs that are displayed on state 2 and 3.
 function preload() {
   vid = loadImage('assets/player.gif');
   shot = loadImage(`assets/shoting.gif`);
@@ -29,30 +31,33 @@ function preload() {
   goodluck = loadImage(`assets/goodluck.gif`);
 };
 
+//
+// This function creates the canvas which has the whole window height and width.
 function setup() {
   createCanvas(windowWidth, windowHeight);
 };
 
+//
+//This function displays all the states and there if statements. It controlls the change between states.
 function draw() {
-  //if statement for the state variable. This changes the screens from start, middle or to end.
   if(state == 0) {
-    startScreen()
+    startScreen() //Title name of the movie/this game
   }else if (state == 1) {
-    intro()
+    intro() //This state is filled with gifs of the movie to introduce the movie to the player.
   }else if (state == 2) {
-    endintro()
+    endintro() //good luck to the player and ending the intro states
   }else if (state == 3) {
-    startGame()
+    startGame() //this state is where the game starts
   } else if (state == 4) {
-    challengeOne()
+    challengeOne() //the player gets their first challenge
   } else if (state == 5) {
-    challengeOneEnd()
+    challengeOneEnd() //the player finished the challenge 1 successfully and acception to challenge 2 appares.
   } else if (state == 6) {
-    challengeTwo()
+    challengeTwo()  //the palyer gets their second challenge with a pop-up block to add a person's name
   } else if (state == 7) {
-    challengTwoEnd()
+    challengTwoEnd()  //Player completed the second challenge and moves towards the end of the game.
   } else if (state == 8){
-    endgame()
+    endgame() //This state ends the game and thanks the player.
   };
 };
 
