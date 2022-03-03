@@ -9,19 +9,9 @@ Movie Nerve
 
 let state = 0;
 
-let vid;
-let shot;
-let eye;
-let file;
-let skull;
-let fingerprint;
-let timer;
-let hacker;
-let goodluck;
+let vid, shot, eye, file, skull, fingerprint, timer, hacker, goodluck;
 
-let userData = {
-  name: `stranger`
-};
+let input, button, greeting;
 
 function preload() {
   vid = loadImage('assets/player.gif');
@@ -113,7 +103,7 @@ function endintro(){
   fill(0, 242, 222);
   textFont(`gasalt`);
   textSize(30);
-  text('Press any key to start', width/2, 800);
+  text('Press mouse to start', width/2, 800);
   image(goodluck, 500,-40, 800, 800);
 };
 
@@ -184,24 +174,7 @@ function challengeTwo() {
   text(`hint: console`, width/2, height/2+350);
   pop();
 
-  let data =  JSON.parse(localStorage.getItem(`web-storage-example-personalization`));
-  if (data !== null) {
-    userData.name = data.name;
-  }
-  else {
-    userData.name = prompt(`What is your SIN number?`);
-    localStorage.setItem(`web-storage-example-personalization`, JSON.stringify(userData));
-  }
-
-  display();
 };
-
-function display(){
-  textSize(64);
-  textAlign(CENTER);
-  text(`Hello, Pippin!`, width/2, height/2);
-}
-
 function mousePressed (){
   if(state == 0){
     state = 1
