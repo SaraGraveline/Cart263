@@ -60,7 +60,7 @@ function draw() {
   };
 };
 
-//
+//State 0
 //This function is for the start screen where the title of the game appares.
 function startScreen() {
   background(0);
@@ -99,9 +99,11 @@ function startScreen() {
   pop();
 };
 
-function intro(){
-  background(0);
-  image(vid, 0,0);
+//State 1
+//This function displays all the gif onto the canvas.
+function intro() {
+  background(0); //black bg.
+  image(vid, 0, 0);
   image(shot, 100, 600, 700, 400);
   image(eye, 1400, 600, 300, 300);
   image(file, 900, 0, 900, 400);
@@ -109,47 +111,55 @@ function intro(){
   image(fingerprint, 950, 450);
   image(timer, 600, 50, 100, 100);
   image(hacker, 70, 280, 250, 250);
-}
-
-function endintro(){
-  background(0); //background image
-  fill(0, 242, 222);
-  textFont(`gasalt`);
-  textSize(30);
-  text('Press mouse to start', width/2, 800);
-  image(goodluck, 500,-40, 800, 800);
 };
 
-function startGame() {
-  push();
-  challengeCompleted();
-  text(`Are you ready for your first challenge!`, width/2, height/4);
-  pop();
+//State 2
+//This function display's the good luck gif to the player and gives the instruction to move forward by pressing the mouse.
+function endintro() {
+  background(0); //black bg
+  fill(0, 242, 222); //neon blue fill
+  textFont(`gasalt`);
+  textSize(30);
+  text('Press mouse to start', width / 2, 800); //Instruction to press the mouse to go to the next state
+  image(goodluck, 500, -40, 800, 800); //loads the goodluck gif onto the canvas
+};
 
+//State 3
+//This function ask the player if they are ready to start playing byt pressing 1 on their keyword to accept the challenge.
+function startGame() {
+  //Question to the player displays on the screen with challengeCompleted function.
+  push();
+  challengeCompleted(); //this function contains all the fill, type, font and size requirement.
+  text(`Are you ready for your first challenge!`, width / 2, height / 4);
+  pop();
+  //this displays the white fake button with the instruction to how to move forward.
   push();
   fill(255);
-  rect(width/2.4, height/2, 300, 120, 40);
-  acceptButton();
-  text(`1 to ACCEPT`, width/2, height/2+70)
+  rect(width / 2.4, height / 2, 300, 120, 40); //white rectangle
+  acceptButton(); //this function is all about text size, font, style for fake button
+  text(`1 to ACCEPT`, width / 2, height / 2 + 70);
   pop();
 
-  emojis();
+  emojis(); //this function is just a fun boucing emojis on the canvas to create excitment.
 
-  if(key ===`1`) {
+  //if statement for when the player press 1, the state should switch to state 4 which is challenge one.
+  if (key === `1`) {
     state = 4
   };
 };
 
+//State 4
+//This function introduces the challenge One and require the player to drop a file onto the canvas in order to move forward.
 function challengeOne() {
-  let f = createCanvas(windowWidth, windowHeight);
- // Add an event for when a file is dropped onto the canvas
- f.drop(kidPhoto);
+  let f = createCanvas(windowWidth, windowHeight); //defines the f where the drop block becomes the whole width and height of the canvas.
+  f.drop(worsePhoto); //the p5 term to drop a file of worse photo onto the canvas
 
- push();
- challengeTypography();
- text('Challenge 1 -', width/2, height/2 - 100)
- text('Drag and Drop a worse image of youself onto this canvas.', width / 2, height / 2);
- pop();
+  //Instruction for what challenge 1 is.
+  push();
+  challengeTypography(); //this function displays the text size, font, style and fill for this text.
+  text('Challenge 1 -', width / 2, height / 2 - 100)
+  text('Drag and Drop a worse image of youself onto this canvas.', width / 2, height / 2);
+  pop();
 };
 
 function challengeOneEnd() {
@@ -240,13 +250,13 @@ function emojis() {
 };
 
 //https://p5js.org/reference/#/p5.Element/drop
-function kidPhoto(file) {
+function worsePhoto(file) {
   // If it's an image file
   if (file.type === 'image') {
     // Create an image DOM element but don't show it
-    let kidphoto = createImg(file.data).hide();
+    let worsePhoto = createImg(file.data).hide();
     // Draw the image onto the canvas
-    image(kidphoto, 0, 0, width, height);
+    image(worsePhoto, 0, 0, width, height);
   }; state = 5;
 };
 
