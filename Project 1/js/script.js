@@ -256,27 +256,32 @@ function mousePressed() {
   };
 };
 
+//Drag and Drop challenge 1 function
+//https://p5js.org/reference/#/p5.Element/drop
+function worsePhoto(file) {
+  // Checks if it's an image file
+  if (file.type === 'image') {
+    // Image DOM element and hide it with hide()
+    let worsePhoto = createImg(file.data).hide();
+    // Displays the image on the canvas
+    image(worsePhoto, 0, 0, width, height);
+  };
+  state = 5; //switches to state 5.
+};
+
+//Emojis
+//This function displays the emojis randomly across x and y axis.
 function emojis() {
-  //by cassie titled hacker on p5js
+  //hacker by cassie on p5js
   push();
   textSize(50);
-  let emojis = ["🎉", "🎊", "🥳", "💖", "🌈","🤑", "💸", "💰", "💵"];
+  let emojis = ["🎉", "🎊", "🥳", "💖", "🌈", "🤑", "💸", "💰", "💵"];
   let emoji = emojis[floor(random(0, emojis.length))];
   text(emoji, random(0, width), random(0, height));
   pop();
 };
 
-//https://p5js.org/reference/#/p5.Element/drop
-function worsePhoto(file) {
-  // If it's an image file
-  if (file.type === 'image') {
-    // Create an image DOM element but don't show it
-    let worsePhoto = createImg(file.data).hide();
-    // Draw the image onto the canvas
-    image(worsePhoto, 0, 0, width, height);
-  }; state = 5;
-};
-
+//This function contains the same type and fill requirement for every beginning of the challenge.
 function challengeTypography() {
   background(255, 68, 204);
   fill(255);
@@ -285,6 +290,7 @@ function challengeTypography() {
   textAlign(CENTER);
 };
 
+//This function contains the same type and fill requirement for every ending of the challenge.
 function challengeCompleted() {
   background(0, 242, 222);
   fill(255, 68, 204);
@@ -292,9 +298,12 @@ function challengeCompleted() {
   textSize(100);
 };
 
+//This function contains the fake white accept button's type and fill requirment.
 function acceptButton() {
   fill(255, 68, 204);
   textSize(50);
   textStyle(BOLD);
   textFont(`gasalt`);
 };
+
+/*Thank you*/
