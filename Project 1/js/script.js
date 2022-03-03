@@ -8,7 +8,6 @@ Dare 1 is to drop a worse picture of oneself and dare 2 is to name the family me
 **/
 
 "use strict";
-
 let state = 0; // state for different pages of the game
 
 let vid, shot, eye, file, skull, fingerprint, timer, hacker, goodluck; // variable for all the gif used on state 2 and on function preload.
@@ -22,7 +21,7 @@ let mostHated = { // variable for the dare 2 - to fill a family member name.
 function preload() {
   vid = loadImage('assets/player.gif');
   shot = loadImage(`assets/shoting.gif`);
-  eye = loadImage( `assets/eye.gif`);
+  eye = loadImage(`assets/eye.gif`);
   file = loadImage(`assets/files.gif`);
   skull = loadImage(`assets/skull.gif`);
   fingerprint = loadImage(`assets/fingerprint.gif`);
@@ -40,58 +39,59 @@ function setup() {
 //
 //This function displays all the states and there if statements. It controlls the change between states.
 function draw() {
-  if(state == 0) {
+  if (state == 0) {
     startScreen() //Title name of the movie/this game
-  }else if (state == 1) {
+  } else if (state == 1) {
     intro() //This state is filled with gifs of the movie to introduce the movie to the player.
-  }else if (state == 2) {
+  } else if (state == 2) {
     endintro() //good luck to the player and ending the intro states
-  }else if (state == 3) {
+  } else if (state == 3) {
     startGame() //this state is where the game starts
   } else if (state == 4) {
     challengeOne() //the player gets their first challenge
   } else if (state == 5) {
     challengeOneEnd() //the player finished the challenge 1 successfully and acception to challenge 2 appares.
   } else if (state == 6) {
-    challengeTwo()  //the palyer gets their second challenge with a pop-up block to add a person's name
+    challengeTwo() //the palyer gets their second challenge with a pop-up block to add a person's name
   } else if (state == 7) {
-    challengTwoEnd()  //Player completed the second challenge and moves towards the end of the game.
-  } else if (state == 8){
+    challengTwoEnd() //Player completed the second challenge and moves towards the end of the game.
+  } else if (state == 8) {
     endgame() //This state ends the game and thanks the player.
   };
 };
 
-//This function is for the start screen/ intro screen.
-function startScreen(){
+//
+//This function is for the start screen where the title of the game appares.
+function startScreen() {
   background(0);
   textAlign(CENTER);
   textSize(60);
-  fill(255, 68, 204)
+  fill(255, 68, 204);
   textFont(`gasalt`);
   textStyle(BOLD);
 
+  //if statement when any key is pressed, it will create strokes around the title text otherwise it will not.
   if (keyIsPressed) {
     stroke(255);
     strokeWeight(4);
-  }
-  else {
+  } else {
     noStroke();
-  }
-
+  };
+  //Nerve text's color, size and position number
   push();
   fill(0, 242, 222)
   textSize(200);
-  text('NERVE', width/2, height/2);
+  text('NERVE', width / 2, height / 2);
   pop();
-
+  //watcher or text position on the canvas
   push();
-  text('WATCHER OR', width/2-100, height/2+50);
+  text('WATCHER OR', width / 2 - 100, height / 2 + 50);
   pop();
-
+  //Player text's position on the canvas
   push();
-  text('PLAYER', width/2+160, height/2+50);
+  text('PLAYER', width / 2 + 160, height / 2 + 50);
   pop();
-
+  //draws the linestroke across the 'watcher or' text.
   push();
   stroke(255);
   strokeWeight(2);
