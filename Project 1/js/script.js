@@ -215,40 +215,44 @@ function challengeTwo() {
 function challengTwoEnd() {
   //Well done and amount of the money recieved text.
   push();
-  challengeCompleted();  //this function contains all the fill, type, font and size requirement.
+  challengeCompleted(); //this function contains all the fill, type, font and size requirement.
   text(`  Well Done!
-    "🎊" You recieved $700. "🎉"`, width/2, height/3);
+    "🎊" You recieved $700. "🎉"`, width / 2, height / 3);
   pop();
   //This text displays the total amount of money recieved by a player, playing this game.
   push();
   fill(255);
-  rect(width/3.1, height/2+100, 610, 120, 40);
+  rect(width / 3.1, height / 2 + 100, 610, 120, 40);
   acceptButton(); //this function is all about text size, font, style for fake button
-  text(`Total money recieved = $10,000`, width/2, height/2+170)
+  text(`Total money recieved = $10,000`, width / 2, height / 2 + 170);
   pop();
 
   emojis(); //this function is just a fun boucing emojis on the canvas to create excitment.
 };
 
-function endgame(){
+//State 8
+//this function ends the game and shows thank you text.
+function endgame() {
   push();
-  challengeCompleted();
+  challengeCompleted(); //this function contains all the fill, type, font and size requirement.
   text(`"🎊" Thank you & I hope
-  you enjoyed this little game. "🎉"`, width/2, height/2-150);
+  you enjoyed this little game. "🎉"`, width / 2, height / 2 - 150);
   pop();
 };
 
-function mousePressed (){
-  if(state == 0){
-    state = 1
-} else if(state == 1) {
-    state = 2
+//MousePressed
+//This function also changes the starts indicated in the if statement when the mouse is pressed.
+function mousePressed() {
+  if (state == 0) { //startscreen state
+    state = 1 //intro state
+  } else if (state == 1) {
+    state = 2 //endintro state
   } else if (state == 2) {
-    state = 3
-  } else if (state == 6) {
-    state = 7
-  }else if (state == 7) {
-    state = 8
+    state = 3 //stateGame state
+  } else if (state == 6) { //intro to challenge 2 state
+    state = 7 //end to challenge 2 state
+  } else if (state == 7) {
+    state = 8 //endgame state
   };
 };
 
