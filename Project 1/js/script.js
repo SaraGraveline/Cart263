@@ -20,7 +20,7 @@ let mostHated = { // variable for the dare 2 - to fill a family member name.
   name: `stranger`
 };
 
-//
+//Preload
 //This preloads all the gifs that are displayed on state 2 and 3.
 function preload() {
   vid = loadImage('assets/player.gif');
@@ -34,13 +34,13 @@ function preload() {
   goodluck = loadImage(`assets/goodluck.gif`);
 };
 
-//
+//Setup
 // This function creates the canvas which has the whole window height and width.
 function setup() {
   createCanvas(windowWidth, windowHeight);
 };
 
-//
+//Draw
 //This function displays all the states and there if statements. It controlls the change between states.
 function draw() {
   if (state == 0) {
