@@ -11,7 +11,9 @@ let state = 0;
 
 let vid, shot, eye, file, skull, fingerprint, timer, hacker, goodluck;
 
-let input, button, greeting;
+let mostHated = {
+  name: `stranger`
+};
 
 function preload() {
   vid = loadImage('assets/player.gif');
@@ -45,6 +47,10 @@ function draw() {
     challengeOneEnd()
   } else if (state == 6) {
     challengeTwo()
+  } else if (state == 7) {
+    challengTwoEnd()
+  } else if (state == 8){
+    endgame()
   };
 };
 
@@ -135,7 +141,7 @@ function challengeOne() {
  push();
  challengeTypography();
  text('Challenge 1 -', width/2, height/2 - 100)
- text('Drag and Drop a image of your child onto this canvas.', width / 2, height / 2);
+ text('Drag and Drop a worse image of youself onto this canvas.', width / 2, height / 2);
  pop();
 };
 
@@ -164,17 +170,44 @@ function challengeOneEnd() {
 function challengeTwo() {
   push();
   challengeTypography();
-  text('Challenge 2 -', width/2, height/2 - 300);
-  text('Rob a bank by finding the bank code.', width / 2, height/2 - 200);
+  text('Challenge 2 -', width/2, height/2 - 100);
+  text('Who do you dislike the most in your family?', width / 2, height/2);
+  pop();
+
+  let data = JSON.parse(localStorage.getItem(`family-name`));
+  if (data !==null) {
+    mostHated.name = data.name
+  } else {
+    mostHated.name = prompt(`Disliked family member?`);
+    localStorage.setItem(`family-name`, JSON.stringify(mostHated));
+  }
+};
+
+function challengTwoEnd() {
+  push();
+  challengeCompleted();
+  text(`  Well Done!
+    "🎊" You recieved $700. "🎉"`, width/2, height/3);
   pop();
 
   push();
-  fill(0);
-  textSize(20);
-  text(`hint: console`, width/2, height/2+350);
+  fill(255);
+  rect(width/3.1, height/2+100, 610, 120, 40);
+  acceptButton();
+  text(`Total money recieved = $10,000`, width/2, height/2+170)
   pop();
 
+  emojis();
 };
+
+function endgame(){
+  push();
+  challengeCompleted();
+  text(`"🎊" Thank you & I hope
+  you enjoyed this little game. "🎉"`, width/2, height/2-150);
+  pop();
+};
+
 function mousePressed (){
   if(state == 0){
     state = 1
@@ -182,6 +215,10 @@ function mousePressed (){
     state = 2
   } else if (state == 2) {
     state = 3
+  } else if (state == 6) {
+    state = 7
+  }else if (state == 7) {
+    state = 8
   };
 };
 
