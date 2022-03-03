@@ -1,6 +1,8 @@
 # Project 1 - A Night at the Movies
 Sara Graveline
 
-This project is loosely based on the movie called Nerve. In this movie, the player needs to get the dare given by the watcher.
-The dare can be anything and at the end, there is only one player. This project looks at two made up dare that the user needs to preform to finish the game.
-Dare 1 is to drop a worse picture of oneself and dare 2 is to name the family member one dislike the most.
+This project is a very small concept from the movie called Nerve. In this movie, the user of this game called nerve has two options: watcher or player. The people who watch are the one who comes up with dare for the player who plays this game. The dares can be anything and the player must complete the dare to win money and get closer to the end up / finals. Whoever gets more challenges done to get more money, and will compete in the finals. There will only be one winner. The player has to record them completing the dare with their own phone. The game nerve is an open source.
+
+While learning about ResponsiveVoice, annyang!, webcam, and JSON data, I was starting to see how scary the internet is. This is why I related this movie to these coding systems because with this and advanced knowledge one can easily their skill for good or bad. They can easily ruin someone's life. So I wanted to use everything we learned in class in the project to show how scary the internet is but I overestimated myself. However, I am still happy with what I made. I might complete this game later on during class or free time.
+
+This small game contains two dares that the player will have to perform to move on to the next round. The first dare is that the player must take the worse image possible and drag and drop it onto the canvas. This action shows internet stores all the information we provide to it. The second dare is where the player must name a family member’s name who they dislike the most. This represents that we must be careful with what we write and which platform we write it on. The overall concept is that the internet is a scary place and we should all be very careful of it.
