@@ -162,59 +162,72 @@ function challengeOne() {
   pop();
 };
 
+//State 5
+//This function is display when challenge one is completed successfully. The displays the result and how much money the player recieved after completed the challenge.
 function challengeOneEnd() {
+  //Well done text and money recieved text with challengeCompleted function.
   push();
-  challengeCompleted();
+  challengeCompleted(); //this function contains all the fill, type, font and size requirement.
   text(`  Well Done!
     "🎊" You recieved $300. "🎉",
-    Next Challenge`, width/2, height/4);
+    Next Challenge`, width / 2, height / 4);
   pop();
 
+  //instruction to move on the the next challenge.
   push();
   fill(255);
-  rect(width/2.4, height/2+100, 300, 120, 40);
-  acceptButton();
-  text(`2 to Accept`, width/2, height/2+170)
+  rect(width / 2.4, height / 2 + 100, 300, 120, 40);
+  acceptButton(); //this function is all about text size, font, style for fake button
+  text(`2 to Accept`, width / 2, height / 2 + 170);
   pop();
 
-  emojis();
+  emojis(); //this function is just a fun boucing emojis on the canvas to create excitment.
 
-  if(key ===`2`) {
+  //if statement for when the player press 2, the state should switch to state 6 which is challenge one.
+  if (key === `2`) {
     state = 6
   };
 };
 
+//State 6
+//This function displays the second challenge with a pop-up where the player will put their family member's name.
 function challengeTwo() {
+  //introduces what challenge 2 is.
   push();
-  challengeTypography();
-  text('Challenge 2 -', width/2, height/2 - 100);
-  text('Who do you dislike the most in your family?', width / 2, height/2);
+  challengeTypography(); //this function contains all the fill, type, font and size requirement.
+  text('Challenge 2 -', width / 2, height / 2 - 100);
+  text('Who do you dislike the most in your family?', width / 2, height / 2);
   pop();
 
+  // a pop-up block where the player will put a name in.
+  //video Web storge AP1 from class
   let data = JSON.parse(localStorage.getItem(`family-name`));
-  if (data !==null) {
+  if (data !== null) {
     mostHated.name = data.name
   } else {
     mostHated.name = prompt(`Disliked family member?`);
     localStorage.setItem(`family-name`, JSON.stringify(mostHated));
-  }
+  };
 };
 
+//State 7
+//This function is for the ending of challenge two where it displays the amount of money won through this challenge and also the total amount of money recieved.
 function challengTwoEnd() {
+  //Well done and amount of the money recieved text.
   push();
-  challengeCompleted();
+  challengeCompleted();  //this function contains all the fill, type, font and size requirement.
   text(`  Well Done!
     "🎊" You recieved $700. "🎉"`, width/2, height/3);
   pop();
-
+  //This text displays the total amount of money recieved by a player, playing this game.
   push();
   fill(255);
   rect(width/3.1, height/2+100, 610, 120, 40);
-  acceptButton();
+  acceptButton(); //this function is all about text size, font, style for fake button
   text(`Total money recieved = $10,000`, width/2, height/2+170)
   pop();
 
-  emojis();
+  emojis(); //this function is just a fun boucing emojis on the canvas to create excitment.
 };
 
 function endgame(){
