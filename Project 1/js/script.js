@@ -5,6 +5,10 @@ Sara Graveline
 This project is losely based on the movie called Nerve. In this movie, the player needs to get the dare given by the watcher.
 The dare can be anything and at the end, there is only one player. This project looks at two made up dare that the user needs to preform to finish the game.
 Dare 1 is to drop a worse picture of oneself and dare 2 is to name the family member one dislike the most.
+
+gif sources: 1) https://gfycat.com/allhandmadeisopod 2) https://www.pinterest.com/pin/82894449376104569/ 3) https://tenor.com/search/fingerprint-gifs 4)https://giphy.com/explore/countdown-timer
+             5) https://vapor95.com/blogs/darknet/hackers 6) https://gifer.com/en/gifs/nerve-movie 7) https://tenor.com/view/nerve-emma-roberts-gif-7390424 8)https://tenor.com/view/eye-see-you-look-animation-gif-10833857
+Reference:   P5js.org reference, class lecture and videos and hacker by cassie on p5js.
 **/
 
 "use strict";
