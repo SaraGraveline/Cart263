@@ -5,9 +5,14 @@ This codes a webpage of text with some passage redacted. And the redacted text a
 */
 
 "use strict";
-
+$(`.top-secret`).on(`click`, redact);
 //telling the revelation function.
 setInterval(revelation, 500);
+
+function redact(event) {
+  $(this).removeClass(`revealed`);
+  $(this).addClass(`redacted`);
+};
 
 function revelation() {
   $(`.redacted`).each(attemptReveal);
