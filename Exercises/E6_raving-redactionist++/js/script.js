@@ -1,9 +1,7 @@
 /**
-Title of Project
-Author Name
+E6: Raving Redactionist
 
-This is a template. You must fill in the title,
-author, and this description to match your project!
+This codes a webpage of text with some passage redacted. And the redacted text appears randoml.
 */
 
 "use strict";
