@@ -9,6 +9,8 @@ $(`.top-secret`).on(`click`, redact);
 //telling the revelation function.
 setInterval(revelation, 500);
 
+
+//hides the text on click
 function redact(event) {
   $(this).removeClass(`revealed`);
   $(this).addClass(`redacted`);
@@ -26,5 +28,3 @@ function attemptReveal() {
     $(this).addClass(`revealed`);
   }
 };
-
-//hides the text
