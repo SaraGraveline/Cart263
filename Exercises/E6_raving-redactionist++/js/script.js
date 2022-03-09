@@ -9,9 +9,9 @@ The main goal is to try to hide the redacted text that is being revealy randomly
 
 
 //makes tge h1 disappear and appear over and over with mouse click on top-secret class.
-$( ".top-secret" ).on(`click`, function(event) {
-  $( "h2" ).fadeOut(500, function() {
-    $(`h2`).fadeIn(500);
+$( `.top-secret` ).on(`click`, function(event) {
+  $( `h1`).fadeOut(500, function() {
+    $(`h1`).fadeIn(500);
   });
 });
 
