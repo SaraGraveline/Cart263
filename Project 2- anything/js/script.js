@@ -12,6 +12,19 @@ Ideas for this project:
 6. save the earth where you clean the ocean by picking up plastic, clean the air with your hand etc.
 7. guess the right person and show
 8. Type experiment where you create your own create your own type.
+9. party games where you do what you want to do: 1)chess, poker, uno,
+10: guess the rbg color where I give the whole theory of color and the person has to follow it.
+
+game 7: guessing game
+  - This game will match the right tv show or diolgue with the right show.
+  - guess the write emjio to the movie
+  - guess the right emjio to the diolgue.
+  - guess the right sport with sport logos
+  - write the lyrics to the song after listening to it. 
+  - use the drag and drop option
+  - use the hand moment
+  - use voice words
+  -
 */
 
 "use strict";
