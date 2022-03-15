@@ -15,16 +15,25 @@ Ideas for this project:
 9. party games where you do what you want to do: 1)chess, poker, uno,
 10: guess the rbg color where I give the whole theory of color and the person has to follow it.
 
+*********
 game 7: guessing game
   - This game will match the right tv show or diolgue with the right show.
   - guess the write emjio to the movie
   - guess the right emjio to the diolgue.
   - guess the right sport with sport logos
-  - write the lyrics to the song after listening to it. 
+  - write the lyrics to the song after listening to it.
   - use the drag and drop option
   - use the hand moment
   - use voice words
-  -
+  - after listening, guess the singer/artist
+  - map which test your history of places (you drag and drop stuff on the map) - this could be mine prototype.
+
+**********
+Game names brainstorm:
+1. Reality check
+2. How much do you think you know
+3. do you know your stuff
+4. Do you know the classic stuff that shapes american culture.
 */
 
 "use strict";
