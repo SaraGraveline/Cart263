@@ -1,9 +1,9 @@
 /**
-Title of Project
-Author Name
+Project 2 - Anything
+Sara Graveline
 
-This is a template. You must fill in the title,
-author, and this description to match your project!
+Ideas for this project:
+1. 
 */
 
 "use strict";
