@@ -1,13 +1,116 @@
-#answer {
-  width: 30rem;
-  height: 2rem;
-  border: 1px dashed black;
+body {
+  position: relative;
+  text-align: center;
+  font-family: MAK, serif;
+  background-image: linear-gradient(to top, #f7fbc8, #26bfed);
+  background-repeat: no-repeat;
 }
 
+h2 {
+  font-size: 3rem;
+  color: red;
+  letter-spacing: -.1rem;
+  margin-bottom: .3rem;
+}
+
+/* name of the author */
+.subtitle {
+  font-size: 1.5rem;
+}
+
+h3 {
+  color: gray;
+  margin-top: 0rem;
+  margin-bottom: 1%;
+}
+
+/* line before the emoji */
+hr {
+  margin-right: 43%;
+  margin-left: 43%;
+  margin-bottom: 2%;
+}
+
+#emoji {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+/* paragraph's numbers */
+p {
+  font-size: 1.2rem;
+  letter-spacing: .08rem;
+  line-height: 2.2rem;
+  margin-top: 0;
+  color: purple;
+}
+
+/* the answer id's margins and border numbers */
+#answer {
+  text-align: center;
+  margin-right: 35%;
+  margin-left: 35%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  height: 2rem;
+  border: 1px solid red;
+}
+
+/* color for the hidden letters */
 .found {
   color: red;
 }
 
+/* gif width */
 img{
   width: 17rem;
+}
+
+/* images of animals */
+.rm {
+  position: absolute;
+  top: 0rem;
+  right: 10rem;
+  width: 8%;
+}
+
+.JK {
+  position: absolute;
+  top: 70rem;
+  right: 20rem;
+}
+
+.jin {
+  position: absolute;
+  top: 10rem;
+  left: 3rem;
+  width: 13%;
+}
+
+.suga {
+  position: absolute;
+  top: 23rem;
+  right: 20rem;
+  width: 12%;
+}
+
+.V {
+  position: absolute;
+  top: 64rem;
+  left: 8rem;
+  width: 10%;
+}
+
+.jimin {
+  position: absolute;
+  top: 35rem;
+  left: 20rem;
+  width: 13%;
+}
+
+.jhope {
+  position: absolute;
+  top: 47rem;
+  right: 7rem;
+  width: 11%;
 }
