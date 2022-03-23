@@ -20,6 +20,8 @@ For the final game quiz ideas:
   *** sources
   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fullscreen_video
   Video by Johnson Cherian from Pixabay
+  Video by Stefania Buzatu from Pixabay
+  https://giphy.com/explore/friends-tv-show // gifs of friends
 */
 
 "use strict";
