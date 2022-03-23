@@ -1,21 +1,20 @@
 /**
-Project 2 - Reality Check
+Project 2 - Anything
 Sara Graveline
 
-Reality check is a game where the user test her/his knowledge by taking some quizzes.
-This prototype has the quiz where the user need to figure out the name of shows based on the emojis showed on the page and put the answer in the box.
 
-***
-For the final game quiz ideas:
-  - match the right tv show diolgue with the right show.
-  - guess the movie from emojis
-  - match the right emoji to the diolgue.
+*********
+game 7: guessing game
+  - This game will match the right tv show or diolgue with the right show.
+  - guess the write emjio to the movie
+  - guess the right emjio to the diolgue.
   - guess the right sport with sport logos
   - write the lyrics to the song after listening to it.
   - use the drag and drop option
   - use the hand moment
   - use voice words
   - after listening, guess the singer/artist
+  - map which test your history of places (you drag and drop stuff on the map) - this could be mine prototype.
 */
 
 "use strict";
