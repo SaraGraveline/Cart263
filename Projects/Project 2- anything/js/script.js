@@ -16,6 +16,10 @@ For the final game quiz ideas:
   - use the hand moment
   - use voice words
   - after listening, guess the singer/artist
+
+  *** sources
+  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fullscreen_video
+  Video by Johnson Cherian from Pixabay
 */
 
 "use strict";
@@ -24,7 +28,7 @@ $(`#solved-dialog`).dialog({
   autoOpen: false, //prevents the pop-up to open before the solution
   //button so the user can close the pop-up
   buttons: {
-    "I know!": function() {
+    "Next Quiz!!": function() {
       $(this).dialog(`close`);
     }
   }
@@ -34,7 +38,7 @@ $(`#solved-dialog`).dialog({
 $(`#failed-dialog`).dialog({
   autoOpen: false,
   buttons: {
-    "Nooooooo!! One more try!": function() {
+    "Nooooooo!! Try again": function() {
       $(this).dialog(`close`);
     }
   }
@@ -56,11 +60,11 @@ $(`#answer`).droppable({
     ui.draggable.draggable(`disable`); //after it is not draggable
     ui.draggable.removeClass(`found`); //and the found class is removes after the task is done.
     //if statement for when the answer is right and the pop-up opens up
-    if($(this).text() ===`🤗bangtan - sonyeondan`) {
+    if($(this).text() ===`🦖🥳👨‍💻🤪🛍🧹`) {
       $(`#solved-dialog`).dialog(`open`);
     }
     //if statement for when the answer is wrong and pop-up opens up
-    if($(this).text() === `bangtan - sonyeondan`) {
+    if($(this).text() === `🥳🤪🦖🛍👨‍💻🧹`) {
       $(`#failed-dialog`).dialog(`open`);
     }
   }

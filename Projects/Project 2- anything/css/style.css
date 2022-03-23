@@ -1,6 +1,103 @@
-/*********************************************
+body {
+  font-family: MAK, serif;
+  background-color: black;
+}
 
-Here is a description of any special CSS used.
-By default that's nothing.
+/* video style with fixed position */
+video {
+  align-items: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 
-**********************************************/
+/* everything except the video is postion relative */
+article {
+  position: relative;
+}
+
+/* Title style */
+h2 {
+  font-size: 3rem;
+  color: white;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+
+/* div for the dot named circles style */
+.circles {
+  margin-left: 25%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid white;
+  background-color: white;
+  display: inline-block;
+  padding: 3rem;
+}
+
+/* empty div/dots style */
+.empty {
+  padding-right: 45px;
+  padding-left: 48px;
+
+}
+
+/* red dots style */
+.red {
+  text-align: center;
+  height: 45px;
+  width: 40px;
+  background-color: #FF0015;
+  border-radius: 43%;
+  display: inline-block;
+}
+
+/* yellow dots style */
+.yellow {
+  height: 45px;
+  width: 38px;
+  background-color: #FEB800;
+  border-radius: 47%;
+  display: inline-block;
+}
+
+/* blue dot style */
+.blue {
+  height: 40px;
+  width: 47px;
+  background-color: #00B1F6;
+  border-radius: 45%;
+  display: inline-block;
+}
+
+/* Paragraph style */
+p {
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: 2.5rem;
+  line-height: 3.5rem;
+}
+
+/* the answer id's margins and border numbers */
+#answer {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-right: 40%;
+  margin-left: 40%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  height: 3rem;
+  border-bottom: 3px solid white;
+}
+
+/* color for the hidden letters */
+.found {
+  outline: white dotted 1px;
+}
+
+/* gif width */
+img{
+  width: 17rem;
+}

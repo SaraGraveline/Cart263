@@ -1,90 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
 
-    <title>CHANGE THIS TITLE IN INDEX.HTML!</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
 
-    <!-- CSS stylesheet(s) -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/vader/jquery-ui.css" />
+  <title>Reality Check!</title>
+
+  <!-- CSS stylesheet(s) -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/vader/jquery-ui.css" />
 
   <!-- Library script(s) go here -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
-    <!-- Library script(s) go here -->
-  </head>
+  <!-- Library script(s) go here -->
+</head>
 
-  <body>
+<body>
+  <!-- background video -->
+  <video autoplay muted loop>
+    <source src="assets/images/Abstract.mp4">
+  </video>
+
+  <article>
+    <!-- puts everything except the video inside this article -->
     <section id="poem">
-      <h2 class="title">ALL OF MY LIFE <span class="subtitle">by Srujani</span></h2>
-      <h3> ***Put all the letters and anything dragable to the box.***</h3>
-      <hr>
-      <span id="emoji" class="secret">🤗</span>
-      <p>
-        Never knew you have The truth untold <span class="secret">b</span>ehind<br />
-        to make you Hold me tight<br />
-        am just loving this Serendipity<br />
-        that you are the cause of my Euphori<span class="secret">a</span><br />
-        Begin during my Epiphany of Fake love Tear days<br />
-        made it we<span class="secret">n</span>t smooth like Butter<br />
-      </p>
-      <p>
-        you are the only Butterfly of My time that<br />
-        I can't Let go on what Your eyes tell<br />
-        Promise you never to Lie despite of any Purpose<br />
-        let the rhythm of our Heartbeat make out a Ma<span class="secret">g</span>ic shop<br />
-        where memories can S<span class="secret">t</span>ay Forever young<br />
-      </p>
-      <p>
-        Love like Life goes ON Still with you<br />
-        he<span class="secret">a</span>rt said I need u even<br />
-        when i imagi<span class="secret">n</span>ed being you Like! Pied piper Filter<br />
-        even when it went all Blue & grey<span class="secret"> - </span><br />
-      </p>
-      <p>
-        now after all thi<span class="secret">s</span> Love maze<br />
-        I kn<span class="secret">o</span>w i can Make it right<br />
-        there is <span class="secret">n</span>o 00:00 needed to Fix you<br />
-        let me be <span class="secret">y</span>ou're Anpanman<br />
-        Stay gold....i found my Home<br />
-        let m<span class="secret">e</span> show you how it looks like<br />
-        when it comes to a B<span class="secret">o</span>y with luv<br />
-      </p>
-      <p>
-        ugh! Everythingoeso<span class="secret">n</span> Just one day my Paradise!<br />
-        but for now let your Inner child<br />
-        sleep like Winter bear un<span class="secret">d</span>er the Moon Light,<br />
-        Tomorrow let's Awake with a cup of Spring d<span class="secret">a</span>ys Coffee<br />
-        where i gonna Film out with The eternal smile of yours<br />
-        & do anythi<span class="secret">n</span>g For you!<br />
+      <!-- title -->
+      <h2 class="title">Guess the name of this show with emojis?</h2>
 
+      <!-- clue of the show that needs to be guessed. It is the six dots. -->
+      <div class="circles">
+        <span class="red"></span>
+        <span class="empty"></span>
+        <span class="yellow"></span>
+        <span class="empty"></span>
+        <span class="blue"></span>
+        <span class="empty"></span>
+        <span class="red"></span>
+        <span class="empty"></span>
+        <span class="yellow"></span>
+        <span class="empty"></span>
+        <span class="blue"></span>
+      </div>
+
+      <!-- all the emojis in paragraph with the secret class. -->
+      <p>
+        😂 <span class="secret">🥳</span> 🤢 🌞 😶 😇 </br>
+
+        🤗 🥳 🎁 <span class="secret">🤪</span> 🤓 👽</br>
+
+        <span class="secret">🦖</span> 😿 👌 👩 🧚 👼</br>
+
+        🧛‍♂️ 🙅‍♂️ 👯‍♂️ 🏃‍♂️ <span class="secret">🛍</span> 🥽</br>
+
+        👑 🎒 <span class="secret">👨‍💻</span> 🦄 🦖 🕸 </br>
+
+        🐍 🐋 🪵 🌸 🌜 <span class="secret">🧹</span>
       </p>
+
     </section>
 
+    <!-- section for answer which is used in JS and CSS -->
     <section id="answer"></section>
 
-    <div id="solved-dialog" title="Congratulation!! You are amazing!">
-      <img src="assets/images/bts-bangtan-boys.gif" alt="Jungkook dancing">
+    <!-- when the answer is correct -->
+    <div id="solved-dialog" title="Congratulation!! It's Friends!">
+      <img src="assets/images/win.gif" alt="Joey and Chandler hugging">
     </div>
 
-    <div id="failed-dialog" title="You failed! You are only missing one thing.">
-      <img src="assets/images/Failed.gif" alt="Suga coming towards you">
+    <!-- when the answer is wrong -->
+    <div id="failed-dialog" title="Almost there, I think">
+      <img src="assets/images/nooooo.gif" alt="Joey saying nooo">
     </div>
+  </article>
 
-    <!-- images of animal -->
-      <img class="rm" src="assets/images/rm.png" alt="RM picture">
-      <img class="JK" src="assets/images/JK.png" alt="JK picture">
-      <img class="jhope" src="assets/images/jhope.png" alt="Jhope picture">
-      <img class="suga" src="assets/images/suga.png" alt="Suga picture">
-      <img class="V" src="assets/images/V.png" alt="V picture">
-      <img class="jin" src="assets/images/jin.png" alt="JIn picture">
-      <img class="jimin" src="assets/images/jimin.png" alt="Jimin picture">
-
-    <!-- My script(s) -->
-    <script src="js/script.js"></script>
-  </body>
+  <!-- My script(s) -->
+  <script src="js/script.js"></script>
+</body>
 
 </html>
