@@ -1,9 +1,8 @@
 /**
-Title of Project
-Author Name
+Desperately Seeking Sadness
+Sara Graveline
 
-This is a template. You must fill in the title,
-author, and this description to match your project!
+This game is trying to find a emoji that is different from the other emoji. It tries to seek unhappiness because its life is way to happy. 
 */
 
 "use strict";
