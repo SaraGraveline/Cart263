@@ -7,11 +7,13 @@ class Boot extends Phaser.Scene {
 
   preload() {
     //load assets here!
-    this.load.image(`room`, `assets/images/room.jpg`);
+    this.load.image(`room`, `assets/images/room.jpg`);//background image
 
     this.load.image(`groom`, `assets/images/groom.png`); //groom image
     this.load.image(`bride`, `assets/images/Bride.png`); //bride image
     this.load.image(`zombie`, `assets/images/zombie.png`); //zombie image
+
+    this.load.audio(`happy`, 'assets/sounds/happy.wav');
 
 
     this.load.on(`complete`, () => {
@@ -20,7 +22,7 @@ class Boot extends Phaser.Scene {
   }
 
   create() {
-    
+
   }
 
   update() {

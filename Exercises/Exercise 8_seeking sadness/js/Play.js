@@ -6,7 +6,7 @@ class Play extends Phaser.Scene {
   }
 
   create() {
-
+    //background image
     this.room = this.physics.add.sprite(0, 0, `room`).setOrigin(0,0);
     //create the groom
     this.groom = this.physics.add.sprite(400, 300, `groom`);
@@ -48,6 +48,7 @@ class Play extends Phaser.Scene {
     let x = Math.random() * this.sys.canvas.width;
     let y = Math.random() * this.sys.canvas.height;
     this.wedding.setPosition(x, y);
+    this.sound.play(`happy`);
   }
 
   update() {
