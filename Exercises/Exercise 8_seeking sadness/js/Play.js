@@ -1,7 +1,7 @@
 class Play extends Phaser.Scene {
   constructor() {
     super ({
-      key: `play`
+      key: `play` //key term
     })
   }
 
@@ -17,28 +17,34 @@ class Play extends Phaser.Scene {
     let x = Math.random() * this.sys.canvas.width;
     let y = Math.random() * this.sys.canvas.height;
     this.wedding = this.physics.add.sprite(x, y, `bride`);
+    this.wedding.setCollideWorldBounds(true);
 
-    //different numbers for zombies
+    //creates a groups of new zombies
     this.abstract = this.physics.add.group({
-      key: `zombie`,
-      quantity: 120,
-      bounceX: 0.5,
+      key: `zombie`, //key term
+      quantity: 120, //how many
+      bounceX: 0.5, //their bounce rate
       bounceY: 0.5,
-      collideWorldBounds: true,
-      dragX: 50,
+      collideWorldBounds: true, //collide with the wall
+      dragX: 50, //slow down after moving
       dragY: 50
     });
-    //gives the one zombie more kids or army.
+
+    //gives a random position to all the zombies inside the canvas.
     Phaser.Actions.RandomRectangle(this.abstract.getChildren(), this.physics.world.bounds);
 
     //checks when the groom and bride overlaps/finds each others.
     this.physics.add.overlap(this.groom, this.wedding, this.getMarried, null, this);
+
     //makes the zombie move aside when groom hits them.
     this.physics.add.collider(this.groom, this.abstract);
+
     //each zombie hitting each others.
     this.physics.add.collider(this.abstract, this.abstract);
+
     //when zombie hits bride, she also moves.
     this.physics.add.collider(this.wedding, this.abstract);
+
     //make the arrow key move the groom on the canvas.
     this.cursors = this.input.keyboard.createCursorKeys();
   }
