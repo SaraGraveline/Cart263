@@ -15,17 +15,20 @@ class Play extends Phaser.Scene {
   }
 
   update() {
+    //arrow key controls and also it rotates the angle of the groom picture.
     if (this.cursors.left.isDown) {
-      this.groom.setVelocityX(-100);
+      this.groom.setVelocityX(-100); //left key arrow
+      this.groom.setAngularVelocity(-150); //groom picture rotates.
     }
     if (this.cursors.right.isDown) {
-      this.groom.setVelocityX(100);
+      this.groom.setVelocityX(100); //right key arrow
+      this.groom.setAngularVelocity(150); //groom picture rotates.
     }
     if (this.cursors.up.isDown) {
-      this.groom.setVelocityY(-100);
+      this.groom.setVelocityY(-100); //up key arrow
     }
     if (this.cursors.down.isDown) {
-      this.groom.setVelocityY(100);
+      this.groom.setVelocityY(100); //down key arrow
     }
   }
 };
