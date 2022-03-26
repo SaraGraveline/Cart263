@@ -4,3 +4,11 @@ Here is a description of any special CSS used.
 By default that's nothing.
 
 **********************************************/
+body {
+  background-color: #fbe4ff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
