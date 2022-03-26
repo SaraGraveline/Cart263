@@ -6,6 +6,8 @@ class Play extends Phaser.Scene {
   }
 
   create() {
+
+    this.room = this.physics.add.sprite(0, 0, `room`).setOrigin(0,0);
     //create the groom
     this.groom = this.physics.add.sprite(400, 300, `groom`);
     //this prevents it from leaving the canvas
