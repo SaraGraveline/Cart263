@@ -8,6 +8,8 @@ class Boot extends Phaser.Scene {
   preload() {
     //load assets here!
 
+    this.load.image(`groom`, `assets/images/groom.png`);
+
     this.load.on(`complete`, () => {
       this.scene.start(`play`);
     });
