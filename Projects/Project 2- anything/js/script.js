@@ -12,7 +12,7 @@ For the final game quiz ideas:
   - match the right emoji to the diolgue.
   - guess the right sport with sport logos
   - write the lyrics to the song after listening to it.
-  - use the drag and drop optionc
+  - use the drag and drop optioncas xdass
   - use the hand moment
   - use voice words
   - after listening, guess the singer/artist
