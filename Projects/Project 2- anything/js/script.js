@@ -7,21 +7,7 @@ This prototype has the quiz where the user need to figure out the name of shows 
 
 ***
 For the final game quiz ideas:
-  - match the right tv show diolgue with the right show.
-  - guess the movie from emojis
-  - match the right emoji to the diolgue.
-  - guess the right sport with sport logos
-  - write the lyrics to the song after listening to it.
-  - use the drag and drop optioncas xdass
-  - use the hand moment
-  - use voice words
-  - after listening, guess the singer/artist
 
-  *** sources
-  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fullscreen_video
-  Video by Johnson Cherian from Pixabay
-  Video by Stefania Buzatu from Pixabay
-  https://giphy.com/explore/friends-tv-show // gifs of friends
 */
 
 "use strict";
