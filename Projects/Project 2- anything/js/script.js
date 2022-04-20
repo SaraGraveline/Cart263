@@ -32,7 +32,7 @@ $(`#solved-dialog`).dialog({
   buttons: {
     "Next Quiz!!": function() {
       $(this).dialog(`close`);
-      location.replace("quiz1.html")
+      location.replace("quiz2.html")
     }
   }
 });
@@ -63,11 +63,11 @@ $(`#answer`).droppable({
     ui.draggable.draggable(`disable`); //after it is not draggable
     ui.draggable.removeClass(`found`); //and the found class is removes after the task is done.
     //if statement for when the answer is right and the pop-up opens up
-    if($(this).text() ===`🦖🥳👨‍💻🤪🛍🧹`) {
+    if($(this).text() ===`Marcel Joey 🔴 🟡 🔵 🔴 🟡 🔵`) {
       $(`#solved-dialog`).dialog(`open`);
     }
-    //if statement for when the answer is wrong and pop-up opens up
-    if($(this).text() === `🥳🤪🦖🛍👨‍💻🧹`) {
+  //  if statement for when the answer is wrong and pop-up opens up
+    if($(this).text() === `Marcus Joey 🔴 🟡 🔵 🔴 🟡 🔵`) {
       $(`#failed-dialog`).dialog(`open`);
     }
   }
