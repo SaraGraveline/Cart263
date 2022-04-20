@@ -7,77 +7,22 @@
 
   <title>Reality Check!</title>
 
-  <!-- CSS stylesheet(s) -->
+  <!-- link to css file -->
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/vader/jquery-ui.css" />
 
-  <!-- Library script(s) go here -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-
-  <!-- Library script(s) go here -->
 </head>
 
 <body>
-  <!-- background video -->
-  <video autoplay muted loop>
-    <source src="assets/images/dots_1.mp4">
-  </video>
+  <h1> Welcome to Reality Check Games! </h2>
+  <p>
+    The aim of this website is to have fun and complete the quizzes in the order (1, 2, 3, 4).<br>
+    These games will test your knowledge on random things. Whenever you are ready, click on the first quiz and start. <br>
+    Good Luck and have fun!
+  </p>
 
-  <article>
-    <!-- puts everything except the video inside this article -->
-    <section id="poem">
-      <!-- title -->
-      <h2 class="title">Guess the name of this show with emojis?</h2>
 
-      <!-- clue of the show that needs to be guessed. It is the six dots. -->
-      <div class="circles">
-        <span class="red"></span>
-        <span class="empty"></span>
-        <span class="yellow"></span>
-        <span class="empty"></span>
-        <span class="blue"></span>
-        <span class="empty"></span>
-        <span class="red"></span>
-        <span class="empty"></span>
-        <span class="yellow"></span>
-        <span class="empty"></span>
-        <span class="blue"></span>
-      </div>
 
-      <!-- all the emojis in paragraph with the secret class. -->
-      <p>
-        😂 <span class="secret">🥳</span> 🤢 🌞 😶 😇 </br>
 
-        🤗 🥳 🎁 <span class="secret">🤪</span> 🤓 👽</br>
-
-        <span class="secret">🦖</span> 😿 👌 👩 🧚 👼</br>
-
-        🧛‍♂️ 🙅‍♂️ 👯‍♂️ 🏃‍♂️ <span class="secret">🛍</span> 🥽</br>
-
-        👑 🎒 <span class="secret">👨‍💻</span> 🦄 🦖 🕸 </br>
-
-        🐍 🐋 🪵 🌸 🌜 <span class="secret">🧹</span>
-      </p>
-
-    </section>
-
-    <!-- section for answer which is used in JS and CSS -->
-    <section id="answer"></section>
-
-    <!-- when the answer is correct -->
-    <div id="solved-dialog" title="Congratulation!! It's Friends!">
-      <img src="assets/images/win.gif" alt="Joey and Chandler hugging">
-    </div>
-
-    <!-- when the answer is wrong -->
-    <div id="failed-dialog" title="Almost there, I think">
-      <img src="assets/images/nooooo.gif" alt="Joey saying nooo">
-    </div>
-  </article>
-
-  <!-- My script(s) -->
-  <script src="js/script.js"></script>
 </body>
 
 </html>

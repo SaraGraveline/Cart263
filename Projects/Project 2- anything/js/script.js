@@ -32,6 +32,7 @@ $(`#solved-dialog`).dialog({
   buttons: {
     "Next Quiz!!": function() {
       $(this).dialog(`close`);
+      location.replace("quiz1.html")
     }
   }
 });
