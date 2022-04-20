@@ -1,11 +1,10 @@
+/* background color and font */
 body {
-  background-image: url("assets/images/homepage_bg_image.png");
+  background-color: #FEFEBE;
   font-family: MAK, serif;
-
-
 }
 
-
+/* heading 1 */
 h1 {
   font-size: 4em;
   text-align: center;
@@ -13,8 +12,44 @@ h1 {
   margin-bottom: 0;
 }
 
+/* intro paragraph */
 p {
   text-align: center;
   font-size: 1em;
   line-height: 1.3em;
+}
+
+/* displays the grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/* for each grid */
+.quiz-grid {
+  border: 4px solid #FEFEBE;
+  padding: 17%;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* background color for each quiz */
+#quiz-1, #quiz-4 {
+  background-color: #05efef;
+}
+
+/* background color for each quiz */
+#quiz-2, #quiz-3 {
+  background-color: #ff4747;
+}
+
+/* link to other html pages */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* the color of the link change when hovered over */
+a:hover {
+  color: white;
 }
