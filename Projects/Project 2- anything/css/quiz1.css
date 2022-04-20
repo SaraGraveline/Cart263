@@ -1,16 +1,38 @@
 body {
   font-family: MAK, serif;
-  background-color: black;
+  background-color: pink;
 }
 
-/* video style with fixed position */
-video {
-  align-items: center;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+/* heading 1 */
+h1 {
+  font-size: 4em;
+  text-align: center;
+  color: red;
+  margin-bottom: 0;
+}
+
+/* intro paragraph */
+.intro-text {
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* displays the grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 60px;
+}
+
+/* for each grid */
+.quiz-grid {
+  border: 4px solid #FEFEBE;
+  font-size: 30px;
+}
+
+h4{
+  margin: 15px;
 }
 
 /* everything except the video is postion relative */
@@ -73,7 +95,7 @@ h2 {
 }
 
 /* Paragraph style */
-p {
+.game {
   font-size: 2.5rem;
   text-align: center;
   letter-spacing: 2.5rem;

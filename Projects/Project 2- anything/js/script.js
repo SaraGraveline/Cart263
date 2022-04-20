@@ -1,5 +1,5 @@
 /**
-Project 2 - Reality Check
+Project 2 - Reality Check - Quiz 1
 Sara Graveline
 
 Reality check is a game where the user test her/his knowledge by taking some quizzes.
