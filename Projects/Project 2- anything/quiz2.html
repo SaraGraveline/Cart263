@@ -1,83 +1,71 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <title>Code Taker</title>
 
-  <title>Reality Check!</title>
+    <!-- CSS stylesheet(s) -->
+    <link rel="stylesheet" type="text/css" href="css/quiz2.css" />
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/vader/jquery-ui.css" />
 
-  <!-- CSS stylesheet(s) -->
-  <link rel="stylesheet" type="text/css" href="css/quiz1.css" />
-  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/vader/jquery-ui.css" />
+    <!-- Library script(s) go here -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  </head>
 
-  <!-- Library script(s) go here -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <body>
+    <!-- HTML would go here if needed. -->
+    <h2 class="title">A note for the Teacher and TA</h2>
+    <h3 class="intro-text">
+      With given words, please complete the three sentenses to reveal the message by dragging and droping them in the box. (For example the two first word is thank you).
+      Good Luck and Have fun!
+    </h3>
 
-  <!-- Library script(s) go here -->
-</head>
+  <section class="container">
+    <!-- emoji -->
+    <span id="emoji">🤗</span>
+    <p>
+      <!-- all the letters with secret class on them -->
+      <span class="secret">h</span><span class="secret">a</span><span class="secret">T</span><span class="secret">n</span><span class="secret">k </span>
+      <span class="secret">u </span><span class="secret">o</span><span class="secret">y</span>
+      <span class="secret">o </span><span class="secret">s</span>
+      <span class="secret">u</span><span class="secret">c</span><span class="secret">m</span><span class="secret">h </span>
+      <span class="secret">P</span><span class="secret">i</span><span class="secret">i</span><span class="secret">n </span><span class="secret">p</span><span class="secret">p</span>
+      <span class="secret">n</span><span class="secret">d </span><span class="secret">a</span>
+      <span class="secret">S</span><span class="secret">r</span><span class="secret">o</span><span class="secret">n. </span><span class="secret">h</span><span class="secret">a</span></br>
+      <span class="secret">I </span>
+      <span class="secret">a</span><span class="secret">h</span><span class="secret">v</span><span class="secret">e </span>
+      <span class="secret">e</span><span class="secret">a</span><span class="secret">r</span><span class="secret">l</span><span class="secret">n</span><span class="secret">e</span><span class="secret">d </span>
+      <span class="secret">a </span>
+      <span class="secret">o</span><span class="secret">l</span><span class="secret">t </span>
+      <span class="secret">n </span><span class="secret">i</span>
+      <span class="secret">i</span><span class="secret">s </span><span class="secret">t</span><span class="secret">h</span>
+      <span class="secret">s</span><span class="secret">s. </span><span class="secret">l</span><span class="secret">a</span><span class="secret">c</span></br>
+      <span class="secret">I </span>
+      <span class="secret">o</span><span class="secret">p</span><span class="secret">h</span><span class="secret">e </span>
+      <span class="secret">o</span><span class="secret">u </span><span class="secret">y</span>
+      <span class="secret">h</span><span class="secret">v</span><span class="secret">a</span><span class="secret">e </span>
+      <span class="secret">a </span>
+      <span class="secret">g</span><span class="secret">e</span><span class="secret">r</span><span class="secret">a</span><span class="secret">t </span>
+      <span class="secret">m</span><span class="secret">m</span><span class="secret">s</span><span class="secret">u</span><span class="secret">e</span><span class="secret">r </span>
+      <span class="secret">n</span><span class="secret">a</span><span class="secret">d </span>
+      <span class="secret">o</span><span class="secret">o</span><span class="secret">g</span><span class="secret">d </span>
+      <span class="secret">e</span><span class="secret">a</span><span class="secret">h</span><span class="secret">l</span><span class="secret">t</span><span class="secret">h.</span>
+    </p>
 
-<body>
-  <!-- background video -->
-  <video autoplay muted loop>
-    <source src="assets/images/dots_1.mp4">
-  </video>
-
-  <article>
-    <!-- puts everything except the video inside this article -->
-    <section id="poem">
-      <!-- title -->
-      <h2 class="title">Guess the name of this show with emojis?</h2>
-
-      <!-- clue of the show that needs to be guessed. It is the six dots. -->
-      <div class="circles">
-        <span class="red"></span>
-        <span class="empty"></span>
-        <span class="yellow"></span>
-        <span class="empty"></span>
-        <span class="blue"></span>
-        <span class="empty"></span>
-        <span class="red"></span>
-        <span class="empty"></span>
-        <span class="yellow"></span>
-        <span class="empty"></span>
-        <span class="blue"></span>
-      </div>
-
-      <!-- all the emojis in paragraph with the secret class. -->
-      <p>
-        😂 <span class="secret">🥳</span> 🤢 🌞 😶 😇 </br>
-
-        🤗 🥳 🎁 <span class="secret">🤪</span> 🤓 👽</br>
-
-        <span class="secret">🦖</span> 😿 👌 👩 🧚 👼</br>
-
-        🧛‍♂️ 🙅‍♂️ 👯‍♂️ 🏃‍♂️ <span class="secret">🛍</span> 🥽</br>
-
-        👑 🎒 <span class="secret">👨‍💻</span> 🦄 🦖 🕸 </br>
-
-        🐍 🐋 🪵 🌸 🌜 <span class="secret">🧹</span>
-      </p>
-
-    </section>
-
-    <!-- section for answer which is used in JS and CSS -->
+  </section>
+    <!-- this is used in js with answer id-->
     <section id="answer"></section>
 
-    <!-- when the answer is correct -->
-    <div id="solved-dialog" title="Congratulation!! It's Friends!">
-      <img src="assets/images/win.gif" alt="Joey and Chandler hugging">
+    <!-- solved dialog for js. -->
+    <div id="solved-dialog" title="Congratulation!! You are amazing!">
+      <img src="assets/images/thank you.gif" alt="hugging">
     </div>
 
-    <!-- when the answer is wrong -->
-    <div id="failed-dialog" title="Almost there, I think">
-      <img src="assets/images/nooooo.gif" alt="Joey saying nooo">
-    </div>
-  </article>
-
-  <!-- My script(s) -->
-  <script src="js/script.js"></script>
-</body>
+    <!-- My script(s) -->
+    <script src="js/quiz2.js"></script>
+  </body>
 
 </html>

@@ -1,0 +1,67 @@
+body {
+  max-height: 100%;
+  position: relative;
+  text-align: center;
+  font-family: MAK, serif;
+  background-color: #f7fbc8;
+  background-repeat: no-repeat;
+}
+
+/* heading 1 */
+h2 {
+  font-size: 4em;
+  text-align: center;
+  color: #26bfed;
+  margin-bottom: 0;
+}
+
+/* container for the emoji and text */
+.container {
+  background-color: #26bfed;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 3%;
+}
+
+
+/* intro paragraph */
+.intro-text {
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.7em;
+  font-style: normal;
+  color: black;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+#emoji {
+  font-size: 3rem;
+}
+
+/* paragraph's numbers */
+p {
+  font-size: 1.2rem;
+  letter-spacing: .08rem;
+  line-height: 2.2rem;
+  margin-top: 0;
+  color: purple;
+}
+
+/* the answer id's margins and border numbers */
+#answer {
+  font-size: 1.5em;
+  text-align: center;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 3%;
+  height: 4rem;
+  border: 2px solid #26bfed;
+}
+
+/* color for the hidden letters */
+.found {
+  color: white;
+}
