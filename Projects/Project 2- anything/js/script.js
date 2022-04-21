@@ -2,9 +2,9 @@
 Project 2 - Reality Check - Quiz 1
 Sara Graveline
 
-Reality check is a game where the user test her/his knowledge by taking some quizzes.
-This game has the quiz where the user need to answer three question to move on to the next question. The first one is about the name of Ross' monkey.
-The Second question is who first find out about Monica and Chandler. and The third question is about the order of the color in friends show logo.
+A reality check is a game where the user tests her/his knowledge by taking some quizzes.
+This game has a quiz where the user needs to answer three questions to move on to the next question. The first one is about the name of Ross's monkey.
+The second question is who first finds out about Monica and Chandler. and The third question is about the order of the color in the friends show logo.
 
   *** sources
   https://giphy.com/explore/friends-tv-show // gifs of friends

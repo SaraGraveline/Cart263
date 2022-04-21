@@ -1,8 +1,9 @@
 /**
 Quiz 2: A note for the Teacher and TA.
+Sara Graveline
 
-The goal is to complete the three sentenses by dragging and droping them into the box. It have a nice note for the teacher and ta.
-I use the ui.draggable and droppable in this quiz.
+The goal is to complete the three sentences by dragging and dropping them into the box. It has a nice note for the teacher and ta.
+I use the UI.draggable and droppable in this quiz.
 
 citation:
 https://giphy.com/gifs/sticker-osjgQPWRx3cac
