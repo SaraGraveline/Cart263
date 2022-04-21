@@ -13,7 +13,7 @@ h1 {
 }
 
 /* intro paragraph */
-p {
+.intro {
   text-align: center;
   font-size: 1em;
   line-height: 1.3em;
@@ -22,7 +22,7 @@ p {
 /* displays the grid */
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50% 50%;
 }
 
 /* for each grid */
@@ -34,7 +34,7 @@ p {
 }
 
 /* background color for each quiz */
-#quiz-1, #quiz-4 {
+#quiz-1, #credit {
   background-color: #05efef;
 }
 
@@ -52,4 +52,10 @@ a {
 /* the color of the link change when hovered over */
 a:hover {
   color: white;
+}
+
+/* for the credits */
+.ending {
+  margin: -4%;
+  font-size: .8em;
 }

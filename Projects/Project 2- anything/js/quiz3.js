@@ -14,7 +14,7 @@ $(`#solved-dialog`).dialog({
   autoOpen: false, //prevents the pop-up to open before the solution
   //button so the user can close the pop-up
   buttons: {
-    "Thank you!!": function() {
+    "The end!!": function() {
       $(this).dialog(`close`);
       location.replace("index.html")
     }

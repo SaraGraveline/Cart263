@@ -1,0 +1,44 @@
+body {
+  background-color: #fbe4ff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-family: MAK, serif;
+}
+
+
+/* heading 1 */
+h1 {
+  margin-top: 0%;
+  font-size: 4em;
+  text-align: center;
+  color: red;
+  margin-bottom: 0;
+}
+
+/* intro paragraph */
+p {
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.3em;
+  margin-bottom: 2%;
+}
+/* alignment for button */
+div {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+/* button and link for quiz 3 */
+a {
+  padding: 18px 28px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: skyblue;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 8px;
+}

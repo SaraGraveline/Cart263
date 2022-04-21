@@ -4,12 +4,9 @@ Sara Graveline
 
 Reality check is a game where the user test her/his knowledge by taking some quizzes.
 This game has the quiz where the user need to answer three question to move on to the next question. The first one is about the name of Ross' monkey.
-The Second question is who first find out about Monica and Chandler. and The third question is about the order of the color in friends show logo. 
+The Second question is who first find out about Monica and Chandler. and The third question is about the order of the color in friends show logo.
 
   *** sources
-  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fullscreen_video
-  Video by Johnson Cherian from Pixabay
-  Video by Stefania Buzatu from Pixabay
   https://giphy.com/explore/friends-tv-show // gifs of friends
 */
 
