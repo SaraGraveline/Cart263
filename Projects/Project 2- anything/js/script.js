@@ -3,19 +3,8 @@ Project 2 - Reality Check - Quiz 1
 Sara Graveline
 
 Reality check is a game where the user test her/his knowledge by taking some quizzes.
-This prototype has the quiz where the user need to figure out the name of shows based on the emojis showed on the page and put the answer in the box.
-
-***
-For the final game quiz ideas:
-  - match the right tv show diolgue with the right show.
-  - guess the movie from emojis
-  - match the right emoji to the diolgue.
-  - guess the right sport with sport logos
-  - write the lyrics to the song after listening to it.
-  - use the drag and drop optioncas xdass
-  - use the hand moment
-  - use voice words
-  - after listening, guess the singer/artist
+This game has the quiz where the user need to answer three question to move on to the next question. The first one is about the name of Ross' monkey.
+The Second question is who first find out about Monica and Chandler. and The third question is about the order of the color in friends show logo. 
 
   *** sources
   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fullscreen_video
